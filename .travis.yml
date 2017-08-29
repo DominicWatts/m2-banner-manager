@@ -1,0 +1,37 @@
+dist: trusty
+
+language: php
+
+sudo: false
+
+php:
+    - 5.6
+    - 7.0
+
+env:
+    global:
+        - secure: "ddpB7DygypALMji6uDaHRn4Cbcvg8QEeMIPlvAGgOZD/idiG0O37d1nGORou5t1/QnyAi1KbRAw1pjsWTcKE0eHYOevyDu6SEzQW0cBUb+C7CIC0VNd2wN4VEPL1abFluve5p/3yM47AkyT1lcUhId9uHBTHDVw3HCNTkf1xKFfDudC82vZU8wHNDADB3kvu72KUU15XdIYVHhvrg7bqpHOc30r+3vF1I9qbPA6TNOF+bmudR+O6J3YbLTn2x8VDnuhFoQ+N1GtUQoAs+GbFWygQ1N1qh9xedlGLz7DZ1VjjyTNI31Hk45F7QogzalHmOtB1N92au6o007MJxxZ8eCN9Q2P4cBnnCY0/IjiAHdETBTnZHDh/OpsZtUkkrWp+uCrmu3muD447/F9zVQaLG76v7F4c+G0YYCaIH1lj0rc5dc9DFCP+nMmzbM/xkUTtxLWT3iHdmHSZdVnijLpH8lZQqqqHynU1pzLHvJOEeYYuCnlupHSWmPmlKi8gu19aOcFcAIY3l9GoC4geP9Y1DqvqwRY0tJ6Fl7McvAzvwty1vUlZTustwfBtZwtKqQMaZLKumMiwwhEAOjELB33a2avOKpP467vacUu+gIgXFBS2T3K3/vOGFAD0A14wg/qiAQ8TntxSLM5lxeeXauR4xuswQaQiSakZsUik+0f0R7U="
+        - secure: "N13kS13gNYhneTjSnzVOLRXqvWjyOfHjsqYUgClJgZXPL+9NxXoiSyQ8C0VcBizQnhkkpG2wJKYtajV4YRV/kE0eAjuNMAf40p6d2yo6KmGiI7diZSrLW5xrVFCM/NpoyqKGZPrN9Kna+eO5c2XucfxewrfDhskFl5/5RwsyyL4bwIj/pE9eTdlfy2xP2FEj2AZOrnoUn6SQRwQdurg6SyKdJRok1AYCUDdCdS5PKug/K+4GhPHyfRO3j9640pBn7PWPvz3f/cFGblZV6zJvf1h6SBeNsGTpDW8JqQjuZ39m+c+ytILcl9k67l8/XmeykPaho7YCwQqtHzSWf6RImh3JP5+wzEVlPPsYSb05AAX5vPDhkxKiGUQljGs92uqIPQcFlPQphBV88m9NJMn6lO93T3ldAi5Xu7XnDIQqpMml9+0yk24HQu4NgAMjsnCBRS9b9Nut6woyz/UZ+90pocc2MUrZjewIsG7/A9vweJP4xf0+ZLHGsK65D3xEZLPA/XaOFPpSzaw4942FO1eXoj8AtNY5AYRGvvLbfC4aB0V7/81HvC8ltJpJKXIEOrt1nvRs46ILU9dyZVMd59XoS3bJlkT5Q8ZwlTArdE1xNHwaWqIm0ky/eVmd3r4aMu8W+lPlau8NPztBYmocMBEaJHjWr3j9ozJvoSeGkzjwyuc="
+    matrix:
+        - TEST_SUITE=unit
+
+matrix:
+    exclude:
+        - php: 7.0
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+install:
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then echo '{\"http-basic\":{\"repo.magento.com\":{\"username\":\"${MAGENTO_USERNAME}\",\"password\":\"${MAGENTO_PASSWORD}\"}}}' > auth.json; fi"
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then composer install --prefer-dist; fi"
+
+script:
+#    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpdoc run -d Block,Helper,Model,Observer -t build/doc; fi"
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpcs Block --standard=psr2 --warning-severity=0; fi"
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpcs Controller --standard=psr2 --warning-severity=0; fi"
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpcs Helper --standard=psr2 --warning-severity=0; fi"
+    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpcs Model --standard=psr2 --warning-severity=0; fi"
+#    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpmd Block/,Helper/,Model/,Observer/,Test/ text cleancode,codesize,controversial,design,naming,unusedcode; fi"
+#    - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then php vendor/bin/phpcpd Block/ Helper/ Model/ Observer/ Test/; fi"
