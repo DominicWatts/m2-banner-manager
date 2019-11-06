@@ -108,7 +108,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
                 'header' => __('Image'),
                 'filter' => false,
                 'width' => '50px',
-                'renderer' => 'Xigen\Bannermanager\Block\Adminhtml\Banner\Helper\Renderer\Image',
+                'renderer' => \Xigen\Bannermanager\Block\Adminhtml\Banner\Helper\Renderer\Image::class,
             ]
         );
         $this->addColumn(
@@ -151,7 +151,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
                 'index' => 'stores',
                 'header_css_class' => 'col-action',
                 'column_css_class' => 'col-action',
-                'renderer' => 'Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab\Helper\Renderer\EditBanner',
+                'renderer' => \Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab\Helper\Renderer\EditBanner::class,
             ]
         );
 

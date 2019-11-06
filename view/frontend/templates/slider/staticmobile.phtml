@@ -8,7 +8,7 @@
 
 // two banners simultanious sends query logic haywire
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$resource       = $objectManager->get('Magento\Framework\App\ResourceConnection');
+$resource       = $objectManager->get(\Magento\Framework\App\ResourceConnection::class);
 $connection     = $resource->getConnection();
 $xbb            = $resource->getTableName('xigen_bannermanager_banner');
 $order          = $block->getSlider()->getSortType() == \Xigen\Bannermanager\Model\Slider::SORT_TYPE_RANDOM ? 'RAND()' : 'order_banner';
@@ -28,8 +28,8 @@ $banners = $connection->fetchAll("SELECT * FROM " . $xbb . "
             foreach ($banners as $loadbanner) :
                 $i++; ?>
                 <?php
-                        // literally wasted hours on simplest feature
-                $banner = $objectManager->get('Xigen\Bannermanager\Model\BannerFactory')->create();
+                // literally wasted hours on simplest feature
+                $banner = $objectManager->get(\Xigen\Bannermanager\Model\BannerFactory::class)->create();
                 $banner->load($loadbanner['banner_id']);
                 ?>
                 <div>

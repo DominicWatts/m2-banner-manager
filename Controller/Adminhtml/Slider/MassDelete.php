@@ -26,7 +26,7 @@ class MassDelete extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractActio
         } else {
             try {
                 foreach ($sliderIds as $sliderUd) {
-                    $slider = $this->_objectManager->create('Xigen\Bannermanager\Model\Slider')
+                    $slider = $this->_objectManager->create(\Xigen\Bannermanager\Model\Slider::class)
                         ->load($sliderUd);
                     $slider->delete();
                 }

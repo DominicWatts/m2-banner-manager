@@ -46,7 +46,10 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      */
     protected function _construct()
     {
-        $this->_init('Xigen\Bannermanager\Model\Slider', 'Xigen\Bannermanager\Model\ResourceModel\Slider');
+        $this->_init(
+            \Xigen\Bannermanager\Model\Slider::class,
+            \Xigen\Bannermanager\Model\ResourceModel\Slider::class
+        );
     }
 
     /**

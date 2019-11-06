@@ -84,7 +84,7 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
         foreach ($sliderCollection as $slider) {
             $this->append(
                 $this->getLayout()->createBlock(
-                    'Xigen\Bannermanager\Block\SliderItem'
+                    \Xigen\Bannermanager\Block\SliderItem::class
                 )->setSliderId($slider->getId())
             );
         }

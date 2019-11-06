@@ -81,7 +81,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
         \Magento\Framework\Data\Form::setFieldsetElementRenderer(
             $this->getLayout()->createBlock(
-                'Xigen\Bannermanager\Block\Adminhtml\Form\Renderer\Fieldset\Element',
+                \Xigen\Bannermanager\Block\Adminhtml\Form\Renderer\Fieldset\Element::class,
                 $this->getNameInLayout().'_fieldset_element'
             )
         );

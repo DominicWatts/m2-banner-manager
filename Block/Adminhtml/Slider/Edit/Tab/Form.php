@@ -73,7 +73,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
         // dependence block
         $dependenceBlock = $this->getLayout()->createBlock(
-            'Magento\Backend\Block\Widget\Form\Element\Dependence'
+            \Magento\Backend\Block\Widget\Form\Element\Dependence::class
         );
 
         // dependence field map array
