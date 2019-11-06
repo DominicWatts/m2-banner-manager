@@ -9,4 +9,4 @@ phpcs-magento2:
   script:
     - phpcs --version
     - phpcs -i
-    - phpcs --colors --standard=Magento2 --warning-severity=0 --report=full,summary,gitblame /builds/magento-modules/m2-banner-manager/
+    - phpcs --colors --standard=Magento2 --report=full,summary,gitblame /builds/magento-modules/m2-banner-manager/
