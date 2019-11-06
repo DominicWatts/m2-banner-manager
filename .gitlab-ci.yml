@@ -1,13 +1,12 @@
 stages:
-  - test
+  - code-style
 
-Code Style:
-  stage: test
+phpcs-magento2:
+  image: domw/phpcs
+  type: code-style
+  tags:
+    - docker
   script:
-    - ~/.composer/vendor/bin/phpcs --standard=PSR2 --colors -pn ./
-
-Mess Detector:
-  stage: test
-  allow_failure: true
-  script:
-    - ~/.composer/vendor/bin/phpmd ./ text phpmd.xml --suffixes php
+    - phpcs --version
+    - phpcs -i
+    - phpcs --colors --standard=Magento2 --warning-severity=0 --report=full,summary,gitblame /builds/magento-modules/m2-banner-manager/
