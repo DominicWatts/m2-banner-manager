@@ -10,7 +10,7 @@
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                 <?php $i = 0; foreach ($block->getBannerCollection() as $banner) :
-                    ?> <li data-target="#homepage-carousel" data-slide-to="<?php echo $i; ?>" class="<?php echo (($i == 0) ? 'active' : '');?>"></li><?php $i++;
+                    ?> <li data-target="#homepage-carousel" data-slide-to="<?= $i; ?>" class="<?= (($i == 0) ? 'active' : '');?>"></li><?php $i++;
 
                 endforeach; ?>
                 </ol>
@@ -18,17 +18,17 @@
                 <div class="carousel-inner"><?php $i = 0;
                 foreach ($block->getBannerCollection() as $banner) :
                     $i++; ?>                  
-                    <div class="item <?php echo (($i == 1) ? 'active' : '');?>">
+                    <div class="item <?= (($i == 1) ? 'active' : '');?>">
                         <?php if ($banner->getClickUrl()) :
-                            ?><a href="<?php echo $banner->getClickUrl(); ?>" target="<?php echo $banner->getTargetValue() ?>"><?php
+                            ?><a href="<?= $banner->getClickUrl(); ?>" target="<?= $banner->getTargetValue() ?>"><?php
                         endif; ?>
-                        <img src="<?php echo $block->getBannerImageUrl($banner) ?>" title="<?php echo $banner->getName(); ?>" alt="<?php echo $banner->getName(); ?>" />
+                        <img src="<?= $block->getBannerImageUrl($banner) ?>" title="<?= $banner->getName(); ?>" alt="<?= $banner->getName(); ?>" />
                         <div class="carousel-caption">
                             <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
-                            <h3><?php echo $banner->getName(); ?></h3>
+                            <h3><?= $banner->getName(); ?></h3>
                             <?php endif; ?>
                             <?php if (!empty($banner->getCaption())) : ?>
-                            <p><?php echo $banner->getCaption(); ?></p>
+                            <p><?= $banner->getCaption(); ?></p>
                             <?php endif; ?>
                         </div>
                         <?php if ($banner->getClickUrl()) :
