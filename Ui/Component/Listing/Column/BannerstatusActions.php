@@ -12,6 +12,9 @@ use Magento\Framework\View\Element\UiComponentFactory;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
+/**
+ * BannerstatusActions class
+ */
 class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {
     /**
@@ -43,7 +46,7 @@ class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Colu
      * @param array $item
      * @return $this
      */
-    protected function _prepareItem(array & $item)
+    protected function _prepareItem(array &$item)
     {
         $itemsAction = $this->getData('itemsAction');
         $indexField = $this->getData('config/indexField');

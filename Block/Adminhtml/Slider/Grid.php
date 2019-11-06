@@ -8,6 +8,9 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Slider;
 
 use Xigen\Bannermanager\Model\Status;
 
+/**
+ * Grid class
+ */
 class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
 
@@ -142,7 +145,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
 
-
         $this->addColumn(
             'status',
             [
@@ -235,7 +237,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      */
     public function getGridUrl()
     {
-        return $this->getUrl('*/*/grid', array('_current' => true));
+        return $this->getUrl('*/*/grid', ['_current' => true]);
     }
 
     /**
@@ -247,7 +249,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     {
         return $this->getUrl(
             '*/*/edit',
-            array('slider_id' => $row->getId())
+            ['slider_id' => $row->getId()]
         );
     }
 }

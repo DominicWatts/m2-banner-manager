@@ -9,6 +9,9 @@ namespace Xigen\Bannermanager\Block;
 use Xigen\Bannermanager\Model\Slider as SliderModel;
 use Xigen\Bannermanager\Model\Status;
 
+/**
+ * SliderItem class
+ */
 class SliderItem extends \Magento\Framework\View\Element\Template
 {
 
@@ -180,6 +183,11 @@ class SliderItem extends \Magento\Framework\View\Element\Template
         }
     }
 
+    /**
+     * isShowTitle method
+     * @return type
+     * @access public
+     */
     public function isShowTitle()
     {
         return $this->_slider->getShowTitle() == SliderModel::SHOW_TITLE_YES ? true : false;
@@ -187,7 +195,6 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     /**
      * get banner collection of slider.
-     *
      * @return \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection
      */
     public function getBannerCollection()
@@ -198,7 +205,6 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     /**
      * get first banner.
-     *
      * @return \Xigen\Bannermanager\Model\Banner
      */
     public function getFirstBannerItem()
@@ -211,7 +217,6 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     /**
      * get position note.
-     *
      * @return string
      */
     public function getPositionNote()
@@ -221,7 +226,6 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     /**
      * set slider model.
-     *
      * @param \Xigen\Bannermanager\Model\Slider $slider
      */
     public function setSlider(\Xigen\Bannermanager\Model\Slider $slider)
@@ -241,9 +245,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     /**
      * get banner image url.
-     *
      * @param \Xigen\Bannermanager\Model\Banner $banner
-     *
      * @return string
      */
     public function getBannerImageUrl(\Xigen\Bannermanager\Model\Banner $banner)

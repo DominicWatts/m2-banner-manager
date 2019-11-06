@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Banner;
 
+/**
+ * Edit class
+ */
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**

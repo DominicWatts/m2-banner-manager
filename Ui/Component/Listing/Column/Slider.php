@@ -10,6 +10,9 @@ use Magento\Framework\View\Element\UiComponentFactory;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
+/**
+ * Slider class
+ */
 class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {
 
@@ -52,7 +55,7 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
      * @param array $item
      * @return array
      */
-    protected function _prepareItem(array & $item)
+    protected function _prepareItem(array &$item)
     {
         $slider = $this->_sliderFactory->create()->load($item[$this->getData('name')]);
 

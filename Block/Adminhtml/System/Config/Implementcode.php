@@ -3,11 +3,21 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Block\Adminhtml\System\Config;
 
+/**
+ * Implementcode class
+ */
 class Implementcode extends \Magento\Config\Block\System\Config\Form\Field
 {
+    /**
+     * _getElementHtml method
+     * @param AbstractElement $element
+     * @return type
+     * @access protected
+     */
     protected function _getElementHtml(\Magento\Framework\Data\Form\Element\AbstractElement $element)
     {
         return '

@@ -89,7 +89,6 @@ class Collection extends BannerCollection implements SearchResultInterface
         $this->aggregations = $aggregations;
     }
 
-
     /**
      * Retrieve all ids for collection.  Backward compatibility with EAV collection.
      * @param int $limit

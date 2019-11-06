@@ -6,8 +6,17 @@ use Magento\Framework\Setup\UpgradeSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
+/**
+ * UpgradeSchema class
+ */
 class UpgradeSchema implements UpgradeSchemaInterface
 {
+    /**
+     * upgrade method
+     * @param SchemaSetupInterface $setup
+     * @param ModuleContextInterface $context
+     * @access public
+     */
     public function upgrade(
         SchemaSetupInterface $setup,
         ModuleContextInterface $context

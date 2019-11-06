@@ -3,9 +3,13 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab\Helper\Renderer;
 
+/**
+ * EditBanner class
+ */
 class EditBanner extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\AbstractRenderer
 {
     /**

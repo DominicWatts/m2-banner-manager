@@ -8,6 +8,9 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
+/**
+ * Save class
+ */
 class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {
     /**
@@ -53,7 +56,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
                     $uploader->setFilesDispersion(true);
 
                     /** @var \Magento\Framework\Filesystem\Directory\Read $mediaDirectory */
-                    $mediaDirectory = $this->_objectManager->get('Magento\Framework\Filesystem')
+                    $mediaDirectory = $this->_objectManager->get(\Magento\Framework\Filesystem::class)
                         ->getDirectoryRead(DirectoryList::MEDIA);
                     $result = $uploader->save(
                         $mediaDirectory->getAbsolutePath(\Xigen\Bannermanager\Model\Banner::BASE_MEDIA_PATH)
@@ -78,8 +81,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
             }
 
             /** @var \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate */
-            //            $localeDate = $this->_objectManager->get('Magento\Framework\Stdlib\DateTime\TimezoneInterface');
-            $localeDate = $this->_objectManager->get('Magento\Framework\Stdlib\DateTime\Timezone');
+            $localeDate = $this->_objectManager->get(\Magento\Framework\Stdlib\DateTime\Timezone::class);
             
             $model->setData($data);
 

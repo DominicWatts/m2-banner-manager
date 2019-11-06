@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
+/**
+ * Edit class
+ */
 class Edit extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
     /**

@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Model\ResourceModel\Banner;
 
+/**
+ * Collection class
+ */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
     protected $_idFieldName = 'banner_id';
@@ -148,7 +151,12 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         return $this->getResource()->getConnection();
     }
 
-
+    /**
+     * getBannerCollection method
+     * @param getBannerCollection $sliderId
+     * @return type
+     * @access public
+     */
     public function getBannerCollection($sliderId)
     {
         /** @var \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $bannerCollection */

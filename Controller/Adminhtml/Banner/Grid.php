@@ -2,6 +2,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
+/**
+ * Grid class
+ */
 class Grid extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {
     /**
@@ -10,7 +13,6 @@ class Grid extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
     public function execute()
     {
         $resultLayout = $this->_resultLayoutFactory->create();
-
         return $resultLayout;
     }
 }

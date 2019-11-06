@@ -3,9 +3,13 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Slider;
 
+/**
+ * Edit class
+ */
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**
@@ -27,6 +31,10 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         parent::__construct($context, $data);
     }
     
+    /**
+     * _construct method
+     * @access protected
+     */
     protected function _construct()
     {
         $this->_objectId = 'slider_id';
@@ -88,6 +96,11 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         ";
     }
 
+    /**
+     * getSlider method
+     * @return type
+     * @access public
+     */
     public function getSlider()
     {
         return $this->_coreRegistry->registry('slider');

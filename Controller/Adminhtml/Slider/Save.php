@@ -3,11 +3,15 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 use Xigen\Bannermanager\Model\Slider;
 
+/**
+ * Save class
+ */
 class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
     /**
@@ -48,7 +52,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
                         ->create()
                         ->addFieldToFilter('slider_id', $model->getId());
                     if (count($bannerIds)) {
-                        $unSelecteds->addFieldToFilter('banner_id', array('nin' => $bannerIds));
+                        $unSelecteds->addFieldToFilter('banner_id', ['nin' => $bannerIds]);
                     }
 
                     foreach ($unSelecteds as $banner) {
@@ -58,7 +62,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 
                     $selectBanner = $this->_bannerCollectionFactory
                         ->create()
-                        ->addFieldToFilter('banner_id', array('in' => $bannerIds));
+                        ->addFieldToFilter('banner_id', ['in' => $bannerIds]);
                     $i = -1;
                     foreach ($selectBanner as $banner) {
                         $banner->setSliderId($model->getId())

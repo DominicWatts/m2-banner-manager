@@ -6,8 +6,16 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
+/**
+ * Delete class
+ */
 class Delete extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
+    /**
+     * execute method
+     * @return type
+     * @access public
+     */
     public function execute()
     {
         $sliderId = $this->getRequest()->getParam(static::PARAM_CRUD_ID);

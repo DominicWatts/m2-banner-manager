@@ -8,6 +8,9 @@ namespace Xigen\Bannermanager\Helper;
 
 use Xigen\Bannermanager\Model\Slider;
 
+/**
+ * Data class
+ */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
@@ -54,7 +57,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getBaseUrlMedia($path = '', $secure = false)
     {
-        return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA, $secure) . $path;
+        return $this->_storeManager
+            ->getStore()
+            ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA, $secure) . $path;
     }
 
     /**
@@ -69,14 +74,14 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             ->load()
             ->toArray();
 
-        $categories = array();
+        $categories = [];
         foreach ($categoriesArray as $categoryId => $category) {
             if (isset($category['name']) && isset($category['level'])) {
-                $categories[] = array(
+                $categories[] = [
                     'label' => $category['name'],
                     'level' => $category['level'],
                     'value' => $categoryId,
-                );
+                ];
             }
         }
 

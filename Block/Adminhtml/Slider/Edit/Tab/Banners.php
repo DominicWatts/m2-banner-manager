@@ -8,6 +8,9 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab;
 
 use Xigen\Bannermanager\Model\Status;
 
+/**
+ * Banners class
+ */
 class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
 {
     /**
@@ -46,7 +49,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
         $this->setSaveParametersInSession(true);
         $this->setUseAjax(true);
         if ($this->getRequest()->getParam('id')) {
-            $this->setDefaultFilter(array('in_banner' => 1));
+            $this->setDefaultFilter(['in_banner' => 1]);
         }
     }
 
@@ -152,8 +155,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
 
-     
-
         return parent::_prepareColumns();
     }
 
@@ -175,6 +176,11 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
         return '';
     }
 
+    /**
+     * getSelectedSliderBanners method
+     * @return type
+     * @access public
+     */
     public function getSelectedSliderBanners()
     {
         $sliderId = $this->getRequest()->getParam('slider_id');
@@ -192,6 +198,11 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
         return $bannerIds;
     }
 
+    /**
+     * _getSelectedBanners method
+     * @return type
+     * @access protected
+     */
     protected function _getSelectedBanners()
     {
         $banners = $this->getRequest()->getParam('banner');

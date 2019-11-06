@@ -9,6 +9,9 @@ namespace Xigen\Bannermanager\Block;
 use Xigen\Bannermanager\Model\Slider as SliderModel;
 use Xigen\Bannermanager\Model\Status;
 
+/**
+ * Bannermanager class
+ */
 class Bannermanager extends \Magento\Framework\View\Element\Template
 {
     /**
@@ -117,7 +120,7 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
             ->addFieldToFilter('position', $position)
             ->addFieldToFilter('status', Status::STATUS_ENABLED);
         $category = $this->_coreRegistry->registry('current_category');
-        if (!is_null($category)) {
+        if ($category == null) {
             $categoryPathIds = $category->getPathIds();
     
             foreach ($sliderCollection as $slider) {
@@ -125,7 +128,7 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
                 if (count(array_intersect($categoryPathIds, $sliderCategoryIds)) > 0) {
                     $this->append(
                         $this->getLayout()->createBlock(
-                            'Xigen\Bannermanager\Block\SliderItem'
+                            \Xigen\Bannermanager\Block\SliderItem::class
                         )->setSliderId($slider->getId())
                     );
                 }

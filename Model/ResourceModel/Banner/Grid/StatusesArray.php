@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Model\ResourceModel\Banner\Grid;
 
+/**
+ * StatusesArray class
+ */
 class StatusesArray implements \Magento\Framework\Option\ArrayInterface
 {
     const STATUS_ENABLED = 1;

@@ -3,6 +3,7 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
@@ -10,18 +11,20 @@ use Magento\Framework\Controller\ResultFactory;
 
 use Xigen\Bannermanager\Model\ResourceModel\Banner\Grid\StatusesArray;
 
+/**
+ * MassDisable class
+ */
 class MassDisable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
 
     /**
      * Execute action
-     *
      * @return \Magento\Backend\Model\View\Result\Redirect
      * @throws \Magento\Framework\Exception\LocalizedException|\Exception
      */
     public function execute()
     {
-        $sliderCollection = $this->_objectManager->create('Xigen\Bannermanager\Model\ResourceModel\Slider\Collection');
+        $sliderCollection = $this->_objectManager->create(\Xigen\Bannermanager\Model\ResourceModel\Slider\Collection::class);
         $collection = $this->_massActionFilter->getCollection($sliderCollection);
         $collectionSize = $collection->getSize();
         foreach ($collection as $item) {

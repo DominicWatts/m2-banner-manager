@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
+/**
+ * Edit class
+ */
 class Edit extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {
     /**

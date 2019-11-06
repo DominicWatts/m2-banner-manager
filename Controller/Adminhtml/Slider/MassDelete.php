@@ -8,8 +8,16 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 use Magento\Framework\Controller\ResultFactory;
 
+/**
+ * MassDelete class
+ */
 class MassDelete extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
+    /**
+     * execute method
+     * @return type
+     * @access public
+     */
     public function execute()
     {
         $sliderIds = $this->getRequest()->getParam('slider');

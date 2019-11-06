@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
+/**
+ * Grid class
+ */
 class Grid extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
     /**
@@ -14,7 +17,6 @@ class Grid extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
     public function execute()
     {
         $resultLayout = $this->_resultLayoutFactory->create();
-
         return $resultLayout;
     }
 }

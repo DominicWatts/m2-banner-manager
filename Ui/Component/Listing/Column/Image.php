@@ -10,6 +10,9 @@ use Magento\Framework\View\Element\UiComponentFactory;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
+/**
+ * Image class
+ */
 class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {
     /**
@@ -50,7 +53,7 @@ class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCol
      * @param array $item
      * @return array
      */
-    protected function _prepareItem(array & $item)
+    protected function _prepareItem(array &$item)
     {
         $width = $this->hasData('width') ? $this->getWidth() : self::IMAGE_WIDTH;
         $height = $this->hasData('height') ? $this->getHeight() : self::IMAGE_HEIGHT;

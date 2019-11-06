@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Model;
 
+/**
+ * Banner class
+ */
 class Banner extends \Magento\Framework\Model\AbstractModel
 {
     /**
@@ -123,7 +126,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
      */
     public function getStoreAttributes()
     {
-        return array(
+        return [
             'name',
             'status',
             'click_url',
@@ -131,7 +134,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
             'image_alt',
             'image',
             'caption'
-        );
+        ];
     }
 
     /**

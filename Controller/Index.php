@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller;
 
+/**
+ * Index class
+ */
 abstract class Index extends \Magento\Framework\App\Action\Action
 {
     /**
@@ -26,7 +29,6 @@ abstract class Index extends \Magento\Framework\App\Action\Action
      * @var \Magento\Framework\Controller\Result\RawFactory
      */
     protected $_resultRawFactory;
-
 
     /**
      * logger.

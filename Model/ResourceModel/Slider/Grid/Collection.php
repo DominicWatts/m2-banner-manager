@@ -12,6 +12,9 @@ use Magento\Framework\Search\AggregationInterface;
 
 use Xigen\Bannermanager\Model\ResourceModel\Slider\Collection as SliderCollection;
 
+/**
+ * Collection class
+ */
 class Collection extends SliderCollection implements SearchResultInterface
 {
     /**
@@ -80,7 +83,6 @@ class Collection extends SliderCollection implements SearchResultInterface
     {
         $this->aggregations = $aggregations;
     }
-
 
     /**
      * Retrieve all ids for collection.  Backward compatibility with EAV collection     *

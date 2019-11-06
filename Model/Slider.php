@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Model;
 
+/**
+ * Slider class
+ */
 class Slider extends \Magento\Framework\Model\AbstractModel
 {
     const XML_CONFIG_BANNERSLIDER = 'bannermanager/general/enable_frontend';
@@ -21,7 +24,6 @@ class Slider extends \Magento\Framework\Model\AbstractModel
      */
     const SORT_TYPE_RANDOM  = 1;
     const SORT_TYPE_ORDERLY = 2;
-
 
     const STYLESLIDE_STATIC_TEMPLATE    = 1;
     const STYLESLIDE_BOOTSTRAP_TEMPLATE = 2;

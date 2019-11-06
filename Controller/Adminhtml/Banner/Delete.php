@@ -6,8 +6,16 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
+/**
+ * Delete class
+ */
 class Delete extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {
+    /**
+     * execute method
+     * @return type
+     * @access public
+     */
     public function execute()
     {
         $bannerId = $this->getRequest()->getParam(static::PARAM_CRUD_ID);

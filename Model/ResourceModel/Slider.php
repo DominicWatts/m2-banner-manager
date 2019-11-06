@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Model\ResourceModel;
 
+/**
+ * Slider class
+ */
 class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**

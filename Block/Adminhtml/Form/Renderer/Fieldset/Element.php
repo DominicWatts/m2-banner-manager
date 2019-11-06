@@ -3,9 +3,13 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Form\Renderer\Fieldset;
 
+/**
+ * Element class
+ */
 class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Element
 {
     /**

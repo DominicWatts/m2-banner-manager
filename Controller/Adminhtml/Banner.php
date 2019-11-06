@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
+/**
+ * Banner class
+ */
 abstract class Banner extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
     const PARAM_CRUD_ID = 'banner_id';
@@ -25,8 +28,10 @@ abstract class Banner extends \Xigen\Bannermanager\Controller\Adminhtml\Abstract
      * @param null $paramCrudId
      * @return \Magento\Framework\Controller\Result\Redirect
      */
-    protected function _getBackResultRedirect(\Magento\Framework\Controller\Result\Redirect $resultRedirect, $paramCrudId = null)
-    {
+    protected function _getBackResultRedirect(
+        \Magento\Framework\Controller\Result\Redirect $resultRedirect,
+        $paramCrudId = null
+    ) {
         switch ($this->getRequest()->getParam('back')) {
             case 'edit':
                 $resultRedirect->setPath(

@@ -3,9 +3,13 @@
 /**
  * Xigen
  */
+// phpcs:ignoreFile
 
 namespace Xigen\Bannermanager\Model;
 
+/**
+ * Status class
+ */
 class Status
 {
     const STATUS_ENABLED = 1;
@@ -18,8 +22,8 @@ class Status
     public static function getAvailableStatuses()
     {
         return [
-            self::STATUS_ENABLED => __('Enabled')
-            , self::STATUS_DISABLED => __('Disabled'),
+            self::STATUS_ENABLED => __('Enabled'),
+            self::STATUS_DISABLED => __('Disabled'),
         ];
     }
 }

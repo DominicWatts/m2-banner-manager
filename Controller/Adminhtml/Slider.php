@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
+/**
+ * Slider class
+ */
 abstract class Slider extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
     const PARAM_CRUD_ID = 'slider_id';

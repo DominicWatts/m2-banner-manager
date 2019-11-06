@@ -8,6 +8,9 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab;
 
 use Xigen\Bannermanager\Model\Status;
 
+/**
+ * Undocumented class
+ */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface
 {
     const FIELD_NAME_SUFFIX = 'slider';
@@ -47,6 +50,10 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
+    /**
+     * _prepareLayout method
+     * @access protected
+     */
     protected function _prepareLayout()
     {
         $this->getLayout()->getBlock('page.title')->setPageTitle($this->getPageTitle());
@@ -64,9 +71,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         /** @var \Magento\Framework\Data\Form $form */
         $form = $this->_formFactory->create();
 
-        /*
-         * declare dependence
-         */
         // dependence block
         $dependenceBlock = $this->getLayout()->createBlock(
             'Magento\Backend\Block\Widget\Form\Element\Dependence'
@@ -130,7 +134,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'required' => false,
             ]
         );
-
 
         $fieldMaps['status'] = $fieldset->addField(
             'status',
@@ -223,15 +226,32 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     public function getDependencyField($refField, $negative = false, $separator = ',', $fieldPrefix = '')
     {
         return $this->_fieldFactory->create(
-            ['fieldData' => ['value' => (string)$refField, 'negative' => $negative, 'separator' => $separator], 'fieldPrefix' => $fieldPrefix]
+            [
+                'fieldData' => [
+                    'value' => (string)$refField,
+                    'negative' => $negative,
+                    'separator' => $separator
+                ],
+                'fieldPrefix' => $fieldPrefix
+            ]
         );
     }
 
+    /**
+     * getSlider method
+     * @return type
+     * @access public
+     */
     public function getSlider()
     {
         return $this->_coreRegistry->registry('slider');
     }
 
+    /**
+     * getPageTitle method
+     * @return type
+     * @access public
+     */
     public function getPageTitle()
     {
         return $this->getSlider()->getId() ? __("Edit Slider '%1'", $this->escapeHtml($this->getSlider()->getTitle())) : __('New Group');

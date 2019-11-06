@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
+/**
+ * Index class
+ */
 class Index extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
     /**
@@ -16,7 +19,6 @@ class Index extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
         if ($this->getRequest()->getQuery('ajax')) {
             $resultForward = $this->_resultForwardFactory->create();
             $resultForward->forward('grid');
-
             return $resultForward;
         }
 

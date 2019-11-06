@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
+/**
+ * AbstractAction class
+ */
 abstract class AbstractAction extends \Magento\Backend\App\Action
 {
     const PARAM_CRUD_ID = 'entity_id';
@@ -143,7 +146,6 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
         $this->_adapterFactory = $adapterFactory;
     }
 
-
     /**
      * @return \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
      *
@@ -152,7 +154,7 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
     protected function _createMainCollection()
     {
         /** @var \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection $collection */
-        $collection = $this->_objectManager->create('Xigen\Bannermanager\Model\ResourceModel\Banner\Collection');
+        $collection = $this->_objectManager->create(\Xigen\Bannermanager\Model\ResourceModel\Banner\Collection::class);
         return $collection;
     }
 
@@ -164,8 +166,10 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
      *
      * @return \Magento\Framework\Controller\Result\Redirect
      */
-    protected function _getBackResultRedirect(\Magento\Framework\Controller\Result\Redirect $resultRedirect, $paramCrudId = null)
-    {
+    protected function _getBackResultRedirect(
+        \Magento\Framework\Controller\Result\Redirect $resultRedirect,
+        $paramCrudId = null
+    ) {
         switch ($this->getRequest()->getParam('back')) {
             case 'edit':
                 $resultRedirect->setPath(

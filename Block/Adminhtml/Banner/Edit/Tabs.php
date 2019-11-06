@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Banner\Edit;
 
+/**
+ * Tabs class
+ */
 class Tabs extends \Magento\Backend\Block\Widget\Tabs
 {
     /**

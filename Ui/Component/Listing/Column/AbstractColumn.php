@@ -6,6 +6,9 @@
 
 namespace Xigen\Bannermanager\Ui\Component\Listing\Column;
 
+/**
+ * AbstractColumn class
+ */
 abstract class AbstractColumn extends \Magento\Ui\Component\Listing\Columns\Column
 {
     /**
@@ -29,5 +32,5 @@ abstract class AbstractColumn extends \Magento\Ui\Component\Listing\Columns\Colu
      * @param array $item
      * @return array
      */
-    abstract protected function _prepareItem(array & $item);
+    abstract protected function _prepareItem(array &$item);
 }

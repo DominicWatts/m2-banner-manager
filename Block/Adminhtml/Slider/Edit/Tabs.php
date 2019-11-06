@@ -6,8 +6,15 @@
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit;
 
+/**
+ * Tabs class
+ */
 class Tabs extends \Magento\Backend\Block\Widget\Tabs
 {
+    /**
+     * _construct method
+     * @access protected
+     */
     protected function _construct()
     {
         parent::_construct();
