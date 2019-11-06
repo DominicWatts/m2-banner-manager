@@ -4,6 +4,7 @@
  * bannermanager slider template
  * @author Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 
 // two banners simultanious sends query logic haywire
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
@@ -22,7 +23,7 @@ $banners = $connection->fetchAll("SELECT * FROM " . $xbb . "
             <strong><span><?= $block->escapeHtml($block->getSlider()->getTitle()); ?></span></strong>
         </div>
     <?php endif; ?>
-    <div class="xigen-bannermanager-static" id="static-slider-<?= $block->getSlider()->getId(); ?>">
+    <div class="xigen-bannermanager-static" id="static-slider-<?= $block->escapeHtmlAttr($block->getSlider()->getId()); ?>">
             <?php $i = 0;
             foreach ($banners as $loadbanner) :
                 $i++; ?>
@@ -31,23 +32,26 @@ $banners = $connection->fetchAll("SELECT * FROM " . $xbb . "
                 $banner = $objectManager->get('Xigen\Bannermanager\Model\BannerFactory')->create();
                 $banner->load($loadbanner['banner_id']);
                 ?>
-            <div>
-                <?php if ($banner->getClickUrl()) : ?>
-                <a href="<?= $banner->getClickUrl() ?>" target="<?= $banner->getTargetValue() ?>">
-                <?php endif; ?>
-                    <img alt="<?= (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>" title="<?= (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>"  src="<?= $block->getBannerImageUrl($banner) ?>" class="img-responsive"/>
-                <?php if ($banner->getClickUrl()) : ?>
-                </a>
-                <?php endif; ?>
-                            
-                <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
-                <h2><?= $banner->getName() ?></h2>
-                <?php endif; ?>
-                
-                <?php if ($banner->getCaption()) : ?>
-                <p><?= strip_tags($banner->getCaption()) ?></p>
-                <?php endif; ?>
-            </div>
+                <div>
+                    <?php if ($banner->getClickUrl()) : ?>
+                    <a href="<?= /* @noEscape */$banner->getClickUrl() ?>" target="<?= /* @noEscape */ $banner->getTargetValue() ?>">
+                    <?php endif; ?>
+                        <img alt="<?= $block->escapeHtmlAttr(($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>" 
+                             title="<?= $block->escapeHtmlAttr(($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>"  
+                             src="<?= /* @noEscape */ $block->getBannerImageUrl($banner) ?>" 
+                             class="img-responsive"/>
+                    <?php if ($banner->getClickUrl()) : ?>
+                    </a>
+                    <?php endif; ?>
+                                
+                    <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
+                    <h2><?= $block->escapeHtml($banner->getName()) ?></h2>
+                    <?php endif; ?>
+                    
+                    <?php if ($banner->getCaption()) : ?>
+                    <p><?= $block->escapeHtml(strip_tags($banner->getCaption())) ?></p>
+                    <?php endif; ?>
+                </div>
             <?php endforeach ?>
     </div>
 

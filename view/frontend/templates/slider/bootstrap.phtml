@@ -2,6 +2,8 @@
 /**
  * @author Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
+// phpcs:disable Squiz.WhiteSpace
 ?>
 <div class="carousel-wrapper">
     <div class="container">
@@ -9,32 +11,34 @@
             <div id="homepage-carousel" class="carousel slide hidden-xs col-xs-lip" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                <?php $i = 0; foreach ($block->getBannerCollection() as $banner) :
-                    ?> <li data-target="#homepage-carousel" data-slide-to="<?= $i; ?>" class="<?= (($i == 0) ? 'active' : '');?>"></li><?php $i++;
-
-                endforeach; ?>
+                <?php $i = 0; foreach ($block->getBannerCollection() as $banner) : ?> 
+                    <li data-target="#homepage-carousel" data-slide-to="<?= $block->escapeHtmlAttr($i); ?>" class="<?= (($i == 0) ? 'active' : '');?>"></li>
+                <?php $i++; endforeach; // phpcs:ignore ?>
                 </ol>
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner"><?php $i = 0;
-                foreach ($block->getBannerCollection() as $banner) :
-                    $i++; ?>                  
+                <div class="carousel-inner">
+                    <?php $i = 0; foreach ($block->getBannerCollection() as $banner) : $i++; // phpcs:ignore ?>
                     <div class="item <?= (($i == 1) ? 'active' : '');?>">
-                        <?php if ($banner->getClickUrl()) :
-                            ?><a href="<?= $banner->getClickUrl(); ?>" target="<?= $banner->getTargetValue() ?>"><?php
-                        endif; ?>
-                        <img src="<?= $block->getBannerImageUrl($banner) ?>" title="<?= $banner->getName(); ?>" alt="<?= $banner->getName(); ?>" />
+                        <?php if ($banner->getClickUrl()) : ?>
+                        <a href="<?= /* @noEscape */ $banner->getClickUrl(); ?>" 
+                           target="<?= $block->escapeHtmlAttr($banner->getTargetValue()) ?>">
+                        <?php endif; ?>
+                        <img src="<?= /* @noEscape */ $block->getBannerImageUrl($banner) ?>" 
+                             title="<?= $block->escapeHtmlAttr($banner->getName()); ?>" 
+                             alt="<?= $block->escapeHtmlAttr($banner->getName()); ?>" />
                         <div class="carousel-caption">
                             <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
-                            <h3><?= $banner->getName(); ?></h3>
+                            <h3><?= $block->escapeHtml($banner->getName()); ?></h3>
                             <?php endif; ?>
                             <?php if (!empty($banner->getCaption())) : ?>
-                            <p><?= $banner->getCaption(); ?></p>
+                            <p><?= $block->escapeHtml($banner->getCaption()); ?></p>
                             <?php endif; ?>
                         </div>
-                        <?php if ($banner->getClickUrl()) :
-                            ?></a><?php
-                        endif; ?>
-                <?php endforeach; ?>    
+                        <?php if ($banner->getClickUrl()) : ?>
+                        </a>
+                        <?php endif; ?>
+                    </div>
+                    <?php endforeach; ?>    
                 </div>
                 <!-- Controls -->
                 <a class="left carousel-control" href="#homepage-carousel" data-slide="prev">

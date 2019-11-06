@@ -2,10 +2,11 @@
 /**
  * Xigen
  */
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
 ?>
 <div class="xigen-bannermanager widget-bannermanager">
-    <?php
-    $sliderId = $block->getData('slider');
-    echo $this->getLayout()->createBlock("Xigen\Bannermanager\Block\SliderItem")->setSliderId($sliderId)->toHtml();
-    ?>
+    <?= $this->getLayout()
+            ->createBlock(\Xigen\Bannermanager\Block\SliderItem::class)
+            ->setSliderId($block->getData('slider'))
+            ->toHtml(); ?>
 </div>

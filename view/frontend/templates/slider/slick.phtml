@@ -3,28 +3,30 @@
  * bannermanager slider template
  * @author Xigen
  */
+// phpcs:disable Magento2.Files.LineLength.MaxExceeded
 ?>
-<div id="homepage-carousel-<?= $block->getSlider()->getId(); ?>">
-    <div class="hero-slider <?= $block->getSlider()->getCssClass(); ?>">
-        <?php $i = 0;
-        foreach ($block->getBannerCollection() as $banner) :
-            $i++; ?>
-        <div class="slide <?= (($i == 1) ? 'active' : '');?>" data-id="<?= $banner->getId(); ?>">
-            <?php if ($banner->getClickUrl()) :
-                ?><a href="<?= $banner->getClickUrl(); ?>" target="<?= $banner->getTargetValue() ?>"><?php
-            endif; ?>
-            <img src="<?= $block->getBannerImageUrl($banner) ?>" title="<?= $banner->getName(); ?>" alt="<?= $banner->getName(); ?>" class="img-responsive" />
+<div id="homepage-carousel-<?= $block->escapeHtmlAttr($block->getSlider()->getId()); ?>">
+    <div class="hero-slider <?= $block->escapeHtmlAttr($block->getSlider()->getCssClass()); ?>">
+        <?php $i = 0; foreach ($block->getBannerCollection() as $banner) : $i++; // phpcs:ignore ?>
+        <div class="slide <?= (($i == 1) ? 'active' : '');?>" data-id="<?= $block->escapeHtmlAttr($banner->getId()); ?>">
+            <?php if ($banner->getClickUrl()) : ?>
+            <a href="<?= /* @noEscape */ $banner->getClickUrl(); ?>" target="<?= /* @noEscape */ $banner->getTargetValue() ?>">
+            <?php endif; ?>
+            <img src="<?= /* @noEscape */ $block->getBannerImageUrl($banner) ?>" 
+                 title="<?= $block->escapeHtmlAttr($banner->getName()); ?>" 
+                 alt="<?= $block->escapeHtmlAttr($banner->getName()); ?>" 
+                 class="img-responsive" />
             <div class="carousel-caption">
                 <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
-                <h3><?= $banner->getName(); ?></h3>
+                <h3><?= $block->escapeHtml($banner->getName()); ?></h3>
                 <?php endif; ?>
                 <?php if (!empty($banner->getCaption())) : ?>
-                    <?= $banner->getCaption(); ?>
+                    <?= /* @noEscape */ $banner->getCaption(); ?>
                 <?php endif; ?>
             </div>
-            <?php if ($banner->getClickUrl()) :
-                ?></a><?php
-            endif; ?>
+            <?php if ($banner->getClickUrl()) : ?>
+            </a>
+            <?php endif; ?>
         </div>
         <?php endforeach; ?>
     </div>
