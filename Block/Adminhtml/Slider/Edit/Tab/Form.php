@@ -98,7 +98,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'class' => 'required-entry',
             ]
         );
-        
+
         $fieldMaps['store_ids'] = $fieldset->addField(
             'store_id',
             'multiselect',

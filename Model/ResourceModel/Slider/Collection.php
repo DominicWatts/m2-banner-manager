@@ -11,7 +11,6 @@ namespace Xigen\Bannermanager\Model\ResourceModel\Slider;
  */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
-
     protected $_idFieldName = 'slider_id';
     /**
      * store view id.

@@ -30,7 +30,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         $this->_coreRegistry = $registry;
         parent::__construct($context, $data);
     }
-    
+
     /**
      * _construct method
      * @access protected
@@ -52,7 +52,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
                 [
                     'label' => __('Create Banner'),
                     'class' => 'add',
-                    'onclick' => 'openBannerPopupWindow(\''.$this->getCreateBannerUrl().'\')',
+                    'onclick' => 'openBannerPopupWindow(\'' . $this->getCreateBannerUrl() . '\')',
                 ],
                 1
             );
@@ -87,7 +87,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
                                $(window).off('focus',windowFocusHandle);
                         } else {
                             $(create_banner_popupwindow).trigger('focus');
-                            create_banner_popupwindow.alert('".__('You have to save banner and close this window!')."');
+                            create_banner_popupwindow.alert('" . __('You have to save banner and close this window!') . "');
                         }
                     }
                     $(window).focus(windowFocusHandle);

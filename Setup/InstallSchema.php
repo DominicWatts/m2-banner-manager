@@ -183,11 +183,11 @@ class InstallSchema implements InstallSchemaInterface
             ['status']
         );
         $installer->getConnection()->createTable($table);
-        
+
         /*
          * End create table xigen_bannermanager_banner
          */
-        
+
         $installer->endSetup();
     }
 }

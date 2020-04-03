@@ -6,8 +6,6 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
-use Magento\Framework\Controller\ResultFactory;
-
 /**
  * MassDelete Xigen Bannermanager class
  */

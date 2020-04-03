@@ -66,13 +66,13 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
                         $(edit_form).append(input);
 
                         window.customsaveAndContinueEdit = function (){
-                            edit_form.action = '".$this->getSaveAndContinueUrl()."';
+                            edit_form.action = '" . $this->getSaveAndContinueUrl() . "';
                             $('.custom-button-submit').trigger('click');
 
                         }
 
                         window.saveAndCloseWindow = function (){
-                            edit_form.action = '".$this->getSaveAndCloseWindowUrl()."';
+                            edit_form.action = '" . $this->getSaveAndCloseWindowUrl() . "';
                             $('.custom-button-submit').trigger('click');
                         }
                     });
@@ -81,7 +81,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 
             if ($bannerId = $this->getRequest()->getParam('banner_id')) {
                 $this->_formScripts[] = '
-                    window.banner_id = '.$bannerId.';
+                    window.banner_id = ' . $bannerId . ';
                 ';
             }
         } else {

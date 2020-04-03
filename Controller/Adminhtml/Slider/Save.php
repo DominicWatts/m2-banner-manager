@@ -7,8 +7,6 @@
 
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
-use Xigen\Bannermanager\Model\Slider;
-
 /**
  * Save Xigen Bannermanager class
  */
@@ -30,7 +28,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
                 $sliderData['store_id'] = implode(',', $sliderData['store_ids']);
                 unset($sliderData['store_ids']);
             }
-            
+
             $model = $this->_sliderFactory->create();
 
             $model->load($sliderId);

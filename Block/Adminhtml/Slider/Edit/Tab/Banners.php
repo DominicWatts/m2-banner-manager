@@ -130,7 +130,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
                 'options' => Status::getAvailableStatuses(),
             ]
         );
-        
+
         $this->addColumn(
             'order_banner_slider',
             [

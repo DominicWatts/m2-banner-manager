@@ -87,7 +87,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 'column_css_class' => 'col-id',
             ]
         );
-        
+
         /**
          * Check is single store mode
          */
@@ -104,7 +104,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 ]
             );
         }
-        
+
         $this->addColumn(
             'title',
             [

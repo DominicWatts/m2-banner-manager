@@ -6,9 +6,9 @@
 
 namespace Xigen\Bannermanager\Ui\Component\Listing\Column;
 
-use Magento\Framework\View\Element\UiComponentFactory;
-
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
+
+use Magento\Framework\View\Element\UiComponentFactory;
 
 /**
  * Slider Xigen Bannermanager class
@@ -25,7 +25,7 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
      * @var \Xigen\Bannermanager\Model\SliderFactory
      */
     protected $_sliderFactory;
-    
+
     /**
      *
      * @param ContextInterface $context

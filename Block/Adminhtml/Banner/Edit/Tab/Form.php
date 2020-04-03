@@ -38,7 +38,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      * @var \Magento\Framework\Stdlib\DateTime\Timezone
      */
     protected $dateTime;
-    
+
     /**
      * Constructor
      * @param \Magento\Backend\Block\Template\Context $context
@@ -82,7 +82,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         \Magento\Framework\Data\Form::setFieldsetElementRenderer(
             $this->getLayout()->createBlock(
                 \Xigen\Bannermanager\Block\Adminhtml\Form\Renderer\Fieldset\Element::class,
-                $this->getNameInLayout().'_fieldset_element'
+                $this->getNameInLayout() . '_fieldset_element'
             )
         );
 
@@ -114,7 +114,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         }
 
         $elements = [];
-        
+
         $elements['status'] = $fieldset->addField(
             'status',
             'select',
@@ -125,7 +125,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'options' => Status::getAvailableStatuses(),
             ]
         );
-        
+
         $elements['name'] = $fieldset->addField(
             'name',
             'text',
@@ -136,7 +136,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'required' => true,
             ]
         );
-        
+
         $elements['show_title'] = $fieldset->addField(
             'show_title',
             'select',
@@ -244,7 +244,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 ],
             ]
         );
-        
+
         $elements['order_banner'] = $fieldset->addField(
             'order_banner',
             'text',

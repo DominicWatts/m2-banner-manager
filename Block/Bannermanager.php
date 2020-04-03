@@ -122,7 +122,7 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
         $category = $this->_coreRegistry->registry('current_category');
         if ($category == null) {
             $categoryPathIds = $category->getPathIds();
-    
+
             foreach ($sliderCollection as $slider) {
                 $sliderCategoryIds = explode(',', $slider->getCategoryIds());
                 if (count(array_intersect($categoryPathIds, $sliderCategoryIds)) > 0) {

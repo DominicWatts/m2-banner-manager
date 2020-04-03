@@ -120,7 +120,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );
-        
+
         $show = true;
         if ($this->_slider->getStoreId() > 0) {
             if ($store != $this->_slider->getStoreId()) {
