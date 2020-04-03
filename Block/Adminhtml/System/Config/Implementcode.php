@@ -3,12 +3,12 @@
 /**
  * Xigen
  */
-// phpcs:disable Magento2.Files.LineLength.MaxExceeded
+// phpcs:disable
 
 namespace Xigen\Bannermanager\Block\Adminhtml\System\Config;
 
 /**
- * Implementcode class
+ * Implementcode Xigen Bannermanager class
  */
 class Implementcode extends \Magento\Config\Block\System\Config\Form\Field
 {

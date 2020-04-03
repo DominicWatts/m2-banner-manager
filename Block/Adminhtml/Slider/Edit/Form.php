@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit;
 
 /**
- * Form class
+ * Form Xigen Bannermanager block class
  */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic
 {

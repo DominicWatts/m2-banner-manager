@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
- * ExportCsv class
+ * ExportCsv Xigen Bannermanager class
  */
 class ExportCsv extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {

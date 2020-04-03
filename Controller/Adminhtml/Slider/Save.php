@@ -10,7 +10,7 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 use Xigen\Bannermanager\Model\Slider;
 
 /**
- * Save class
+ * Save Xigen Bannermanager class
  */
 class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {
@@ -41,7 +41,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
                 $model->save();
 
                 if (isset($formPostValues['slider_banner'])) {
-                    $bannerGridSerializedInputData = $this->_jsHelper->decodeGridSerializedInput($formPostValues['slider_banner']);
+                    $bannerGridSerializedInputData = $this->_jsHelper->decodeGridSerializedInput($formPostValues['slider_banner']); // phpcs:ignore
                     $bannerIds = [];
                     foreach ($bannerGridSerializedInputData as $key => $value) {
                         $bannerIds[] = $key;

@@ -11,8 +11,10 @@ use Magento\Framework\Controller\ResultFactory;
 
 use Xigen\Bannermanager\Model\ResourceModel\Banner\Grid\StatusesArray;
 
+use Xigen\Bannermanager\Model\ResourceModel\Slider\Collection;
+
 /**
- * MassEnable class
+ * MassEnable Xigen Bannermanager class
  */
 class MassEnable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
@@ -24,7 +26,7 @@ class MassEnable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractActio
      */
     public function execute()
     {
-        $sliderCollection = $this->_objectManager->create(\Xigen\Bannermanager\Model\ResourceModel\Slider\Collection::class);
+        $sliderCollection = $this->_objectManager->create(Collection::class);
         $collection = $this->_massActionFilter->getCollection($sliderCollection);
         $collectionSize = $collection->getSize();
         foreach ($collection as $item) {

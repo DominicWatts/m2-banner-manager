@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Block\Adminhtml;
 
 /**
- * Slider class
+ * Slider Xigen Bannermanager class
  */
 class Slider extends \Magento\Backend\Block\Widget\Grid\Container
 {

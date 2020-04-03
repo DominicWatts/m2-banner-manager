@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 use Magento\Framework\Controller\ResultFactory;
 
 /**
- * MassDelete class
+ * MassDelete Xigen Bannermanager class
  */
 class MassDelete extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {

@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Helper;
 use Xigen\Bannermanager\Model\Slider;
 
 /**
- * Data class
+ * Data Xigen Bannermanager class
  */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {

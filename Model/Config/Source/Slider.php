@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Model\Config\Source;
 
 /**
- * Slider class
+ * Slider Xigen Bannermanager class
  */
 class Slider implements \Magento\Framework\Option\ArrayInterface
 {

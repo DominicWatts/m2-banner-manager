@@ -13,7 +13,7 @@ use Magento\Framework\Search\AggregationInterface;
 use Xigen\Bannermanager\Model\ResourceModel\Slider\Collection as SliderCollection;
 
 /**
- * Collection class
+ * Collection Xigen Bannermanager class
  */
 class Collection extends SliderCollection implements SearchResultInterface
 {

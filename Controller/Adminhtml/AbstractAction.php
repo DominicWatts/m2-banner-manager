@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
 /**
- * AbstractAction class
+ * AbstractAction Xigen Bannermanager class
  */
 abstract class AbstractAction extends \Magento\Backend\App\Action
 {

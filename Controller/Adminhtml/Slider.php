@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
 /**
- * Slider class
+ * Slider Xigen Bannermanager class
  */
 abstract class Slider extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {

@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Slider\Edit\Tab;
 use Xigen\Bannermanager\Model\Status;
 
 /**
- * Undocumented class
+ * Form Xigen Bannermanager block class
  */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface
 {
@@ -254,7 +254,12 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      */
     public function getPageTitle()
     {
-        return $this->getSlider()->getId() ? __("Edit Slider '%1'", $this->escapeHtml($this->getSlider()->getTitle())) : __('New Group');
+        return $this->getSlider()->getId() ?
+            __(
+                "Edit Slider '%1'",
+                $this->escapeHtml($this->getSlider()->getTitle())
+            )
+            : __('New Group');
     }
 
     /**

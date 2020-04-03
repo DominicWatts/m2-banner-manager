@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller;
 
 /**
- * Index class
+ * Index Xigen Bannermanager class
  */
 abstract class Index extends \Magento\Framework\App\Action\Action
 {

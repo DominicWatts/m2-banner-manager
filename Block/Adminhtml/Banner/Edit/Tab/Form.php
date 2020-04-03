@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Banner\Edit\Tab;
 use Xigen\Bannermanager\Model\Status;
 
 /**
- * Form class
+ * Form Xigen Bannermanager class
  */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magento\Backend\Block\Widget\Tab\TabInterface
 {

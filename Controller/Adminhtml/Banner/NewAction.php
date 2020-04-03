@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
 /**
- * NewAction class
+ * NewAction Xigen Bannermanager class
  */
 class NewAction extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {

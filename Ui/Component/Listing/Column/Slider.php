@@ -11,7 +11,7 @@ use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
 /**
- * Slider class
+ * Slider Xigen Bannermanager class
  */
 class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {

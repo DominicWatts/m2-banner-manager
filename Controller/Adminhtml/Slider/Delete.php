@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 /**
- * Delete class
+ * Delete Xigen Bannermanager class
  */
 class Delete extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {

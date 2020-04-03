@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Model\ResourceModel\Banner\Grid;
 
 /**
- * StatusesArray class
+ * StatusesArray Xigen Bannermanager class
  */
 class StatusesArray implements \Magento\Framework\Option\ArrayInterface
 {

@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Model;
 
 /**
- * Slider class
+ * Slider Xigen Bannermanager class
  */
 class Slider extends \Magento\Framework\Model\AbstractModel
 {

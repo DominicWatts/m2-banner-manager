@@ -11,15 +11,17 @@
             <div id="homepage-carousel" class="carousel slide hidden-xs col-xs-lip" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                <?php $i = 0; foreach ($block->getBannerCollection() as $banner) : ?> 
-                    <li data-target="#homepage-carousel" data-slide-to="<?= $block->escapeHtmlAttr($i); ?>" class="<?= (($i == 0) ? 'active' : '');?>"></li>
+                <?php $i = 0; foreach ($block->getBannerCollection() as $banner): ?> 
+                    <li data-target="#homepage-carousel" 
+                        data-slide-to="<?= $block->escapeHtmlAttr($i); ?>" 
+                        class="<?= (($i == 0) ? 'active' : '');?>"></li>
                 <?php $i++; endforeach; // phpcs:ignore ?>
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <?php $i = 0; foreach ($block->getBannerCollection() as $banner) : $i++; // phpcs:ignore ?>
                     <div class="item <?= (($i == 1) ? 'active' : '');?>">
-                        <?php if ($banner->getClickUrl()) : ?>
+                        <?php if ($banner->getClickUrl()): ?>
                         <a href="<?= /* @noEscape */ $banner->getClickUrl(); ?>" 
                            target="<?= $block->escapeHtmlAttr($banner->getTargetValue()) ?>">
                         <?php endif; ?>
@@ -27,14 +29,14 @@
                              title="<?= $block->escapeHtmlAttr($banner->getName()); ?>" 
                              alt="<?= $block->escapeHtmlAttr($banner->getName()); ?>" />
                         <div class="carousel-caption">
-                            <?php if ($banner->getShowTitle() == 1 && $banner->getName()) : ?>
+                            <?php if ($banner->getShowTitle() == 1 && $banner->getName()): ?>
                             <h3><?= $block->escapeHtml($banner->getName()); ?></h3>
                             <?php endif; ?>
-                            <?php if (!empty($banner->getCaption())) : ?>
+                            <?php if (!empty($banner->getCaption())): ?>
                             <p><?= $block->escapeHtml($banner->getCaption()); ?></p>
                             <?php endif; ?>
                         </div>
-                        <?php if ($banner->getClickUrl()) : ?>
+                        <?php if ($banner->getClickUrl()): ?>
                         </a>
                         <?php endif; ?>
                     </div>

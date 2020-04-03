@@ -7,7 +7,7 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
 /**
- * UpgradeSchema class
+ * UpgradeSchema Xigen Bannermanager class
  */
 class UpgradeSchema implements UpgradeSchemaInterface
 {

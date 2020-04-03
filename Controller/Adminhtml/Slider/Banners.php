@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 /**
- * Banners class
+ * Banners Xigen Bannermanager class
  */
 class Banners extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {

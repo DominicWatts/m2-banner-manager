@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Slider;
 use Xigen\Bannermanager\Model\Status;
 
 /**
- * Grid class
+ * Grid Xigen Bannermanager block class
  */
 class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {

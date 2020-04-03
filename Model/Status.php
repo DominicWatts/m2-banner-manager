@@ -8,7 +8,7 @@
 namespace Xigen\Bannermanager\Model;
 
 /**
- * Status class
+ * Status Xigen Bannermanager class
  */
 class Status
 {

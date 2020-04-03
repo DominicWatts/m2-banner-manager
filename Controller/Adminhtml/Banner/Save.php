@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
- * Save class
+ * Save Xigen Bannermanager class
  */
 class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 {

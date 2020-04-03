@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Model\ResourceModel\Slider;
 
 /**
- * Collection class
+ * Collection Xigen Bannermanager class
  */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {

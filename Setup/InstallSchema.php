@@ -11,7 +11,7 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
 /**
- * InstallSchema class
+ * InstallSchema Xigen Bannermanager class
  */
 class InstallSchema implements InstallSchemaInterface
 {

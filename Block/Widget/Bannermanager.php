@@ -8,7 +8,7 @@
 namespace Xigen\Bannermanager\Block\Widget;
 
 /**
- * Bannermanager class
+ * Bannermanager Xigen Bannermanager class
  */
 class Bannermanager extends \Magento\Framework\View\Element\Template implements \Magento\Widget\Block\BlockInterface
 {

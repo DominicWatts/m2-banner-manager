@@ -11,7 +11,7 @@ use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
 /**
- * Image class
+ * Image Xigen Bannermanager class
  */
 class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {

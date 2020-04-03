@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml;
 
 /**
- * Banner class
+ * Banner Xigen Bannermanager class
  */
 abstract class Banner extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {

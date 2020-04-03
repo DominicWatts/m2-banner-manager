@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Model\ResourceModel;
 
 /**
- * Banner class
+ * Banner Xigen Bannermanager class
  */
 class Banner extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

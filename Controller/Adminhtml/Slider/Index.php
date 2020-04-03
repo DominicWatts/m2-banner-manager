@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 /**
- * Index class
+ * Index Xigen Bannermanager class
  */
 class Index extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 {

@@ -13,7 +13,7 @@ use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 
 /**
- * BannerstatusActions class
+ * BannerstatusActions XigenBannermanager class
  */
 class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractColumn
 {

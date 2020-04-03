@@ -11,7 +11,7 @@ use Magento\Framework\Controller\ResultFactory;
 use Xigen\Bannermanager\Model\ResourceModel\Banner\Grid\StatusesArray;
 
 /**
- * MassDisable class
+ * MassDisable Xigen Bannermanager class
  */
 class MassDisable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {

@@ -3,12 +3,12 @@
 /**
  * Xigen
  */
-// phpcs:disable Magento2.Files.LineLength.MaxExceeded
+// phpcs:disable
 
 namespace Xigen\Bannermanager\Block\Adminhtml\Slider;
 
 /**
- * Edit class
+ * Edit Xigen Bannermanager block class
  */
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {

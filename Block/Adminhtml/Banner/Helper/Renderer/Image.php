@@ -7,7 +7,7 @@
 namespace Xigen\Bannermanager\Block\Adminhtml\Banner\Helper\Renderer;
 
 /**
- * Image class
+ * Image Xigen Bannermanager class
  */
 class Image extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\AbstractRenderer
 {

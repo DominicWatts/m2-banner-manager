@@ -10,7 +10,7 @@ use Xigen\Bannermanager\Model\Slider as SliderModel;
 use Xigen\Bannermanager\Model\Status;
 
 /**
- * Bannermanager class
+ * Bannermanager Xigen Bannermanager class
  */
 class Bannermanager extends \Magento\Framework\View\Element\Template
 {
