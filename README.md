@@ -1,5 +1,5 @@
 # Magento 2 Banner Manager Extension #
 
-composer config repositories.magento-modules/m2-banner-manager git https://git.xigen.co.uk/magento-modules/m2-banner-manager.git
+![phpcs](https://github.com/DominicWatts/m2-banner-manager/workflows/phpcs/badge.svg)
 
-composer require magento-modules/m2-banner-manager:1.0.6
+![PHPCompatibility](https://github.com/DominicWatts/m2-banner-manager/workflows/PHPCompatibility/badge.svg)
