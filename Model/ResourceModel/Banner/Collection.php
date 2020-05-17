@@ -162,6 +162,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      */
     public function getBannerCollection($sliderId)
     {
+        $this->clear()->getSelect()->reset(\Zend_Db_Select::WHERE)
         /** @var \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $bannerCollection */
         $bannerCollection = $this->addFieldToFilter('slider_id', $sliderId)
             ->addFieldToFilter('status', \Xigen\Bannermanager\Model\Status::STATUS_ENABLED)
