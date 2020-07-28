@@ -26,6 +26,11 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     protected $_bannermanagerHelper;
 
     /**
+     * @var \Magento\Store\Model\System\Store
+     */
+    protected $_systemStore;
+
+    /**
      * Constructor
      * @param \Magento\Backend\Block\Template\Context $context
      * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
