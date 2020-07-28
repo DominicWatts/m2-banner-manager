@@ -38,7 +38,7 @@ class MassEnable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractActio
             }
         }
 
-        $this->messageManager->addSuccess(__('A total of %1 record(s) have been disabled.', $collectionSize));
+        $this->messageManager->addSuccess(__('A total of %1 record(s) have been enabled.', $collectionSize));
 
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
 
