@@ -21,7 +21,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Xigen\Bannermanager\Block\Adminhtml\Slider" name="admin.block.slider.grid.container"/>
+            <uiComponent name="banner_slider_listing"/>
         </referenceContainer>
     </body>
 </page>
