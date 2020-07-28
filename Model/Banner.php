@@ -52,6 +52,11 @@ class Banner extends \Magento\Framework\Model\AbstractModel
     protected $_monolog;
 
     /**
+     * @var int
+     */
+    protected $_storeViewId;
+
+    /**
      *
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry

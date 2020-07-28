@@ -25,7 +25,7 @@ class ExportExcel extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
         /** @var \\Magento\Framework\View\Result\Page $resultPage */
         $resultPage = $this->_resultPageFactory->create();
         $content = $resultPage->getLayout()
-            ->createBlock(Xigen\Bannermanager\Block\Adminhtml\Slider\Grid::class)
+            ->createBlock(\Xigen\Bannermanager\Block\Adminhtml\Slider\Grid::class)
             ->getExcel();
 
         return $this->_fileFactory->create($fileName, $content, DirectoryList::VAR_DIR);
